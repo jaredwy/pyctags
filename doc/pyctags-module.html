@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyctags</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://code.google.com/p/pyctags">pyctags</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;pyctags
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyctags-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PACKAGE DESCRIPTION ==================== -->
+<h1 class="epydoc">Package pyctags</h1><p class="nomargin-top"><span class="codelink"><a href="pyctags-pysrc.html">source&nbsp;code</a></span></p>
+<p>A ctags file reader and a wrapper to the command line program ctags.  
+  With the extensions that exuberant ctags provides, this could be useful 
+  for static code analysis.</p>
+  <p>This package has been tested against exuberant ctags version 5.7 and 
+  SVN revision 686 on Windows XP and Linux with Python 2.5 and 3.0.</p>
+  <p><b>Security Notes:</b></p>
+  <ul>
+    <li>
+      This package makes use of the subprocess.Popen() and eval() python 
+      constructs.
+    </li>
+    <li>
+      This package <b>does not</b> filter the parameters for security, 
+      instead relying on module users to implement relevant security for 
+      their applications.
+    </li>
+  </ul>
+  <p>Included in the source distribution are a few examples of usage, the 
+  test cases provide a more comprehensive usage reference.</p>
+  <p>Here's a very small sample to show it in action:</p>
+<pre class="literalblock">
+   from pyctags import exuberant_ctags, ctags_file
+   from pyctags.harvesters import kind_harvester
+
+   # if you have a list of source files:
+   ctags = exuberant_ctags(files=['path/to/source.h', 'path/to/source.c', 'path/to/source.py'])
+
+   # you can generate a ctags_file instance right away
+   # ctags_file is what parses lines from the generator or a 
+   # tags file and creates a list of ctags_entry instances
+   tag_file = ctags.generate_object()
+
+   # override the default run parameters for exuberant ctags, so we get full kind names, say
+   tag_file = ctags.generate_object(generator_options={'--fields' : '+iKmn', '-F' : None})
+
+   print len(tagfile.tags) # number of tags
+   
+   harvester = kind_harvester()
+   harvester.process_tag_list(tagfile.tags)
+   kinds = harvester.get_data()
+   print(kinds['class']) # print list of classes
+</pre>
+  <p>I'm not certain if ctags generators other than Exuberant Ctags are in 
+  much use, but wrappers for them can be derived from ctags_base. Feel free
+  to contact me for or with details.</p>
+  <p>Pyctags is pretty heavy for large projects.  A 153 MB tag file 
+  generated from linux kernel sources takes a while to process and consumes
+  over 1.1GB of RAM.  I hope to discover more ways to trim this down 
+  without going for a C implementation.</p>
+
+<!-- ==================== SUBMODULES ==================== -->
+<a name="section-Submodules"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Submodules</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Submodules"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td class="summary">
+  <ul class="nomargin">
+    <li> <strong class="uidlink"><a href="pyctags.exuberant-module.html">pyctags.exuberant</a></strong>: <em class="summary">Exuberant Ctags (<a href="http://ctags.sourceforge.net" 
+        target="_top">http://ctags.sourceforge.net</a>) wrapper.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyctags.harvesters-module.html">pyctags.harvesters</a></strong>: <em class="summary">Classes that process tag data to collect information.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyctags.kwargs_validator-module.html">pyctags.kwargs_validator</a></strong>: <em class="summary">A simple validator to make sure keyword arguments are valid.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyctags.tag_base-module.html">pyctags.tag_base</a></strong>: <em class="summary">Base class for wrappers around ctags programs.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyctags.tag_entry-module.html">pyctags.tag_entry</a></strong>: <em class="summary">Python representation of ctags data elements.</em>    </li>
+    <li> <strong class="uidlink"><a href="pyctags.tag_file-module.html">pyctags.tag_file</a></strong>: <em class="summary">Python representation of ctags format file.</em>    </li>
+  </ul></td></tr>
+</table>
+
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://code.google.com/p/pyctags">pyctags</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jan 01 04:48:47 2009
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

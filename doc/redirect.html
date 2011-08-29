@@ -1,0 +1,38 @@
+<html><head><title>Epydoc Redirect Page</title>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+var pages = ["pyctags.kwargs_validator.kwargs_validator-c", "pyctags.harvesters.name_lookup_harvester-c", "pyctags.kwargs_validator.ParameterError-c", "pyctags.harvesters.by_name_harvester-c", "pyctags.exuberant.exuberant_ctags-c", "pyctags.harvesters.base_harvester-c", "pyctags.harvesters.kind_harvester-c", "pyctags.tag_entry.ctags_entry-c", "pyctags.tag_base.ctags_base-c", "pyctags.tag_file.ctags_file-c", "pyctags.kwargs_validator-m", "pyctags.harvesters-m", "pyctags.exuberant-m", "pyctags.tag_entry-m", "pyctags.tag_base-m", "pyctags.tag_file-m", "pyctags-m"];
+var dottedName = get_anchor();
+if (dottedName) {
+    var target = redirect_url(dottedName);
+    if (target) window.location.replace(target);
+}
+// -->
+</script>
+
+<h3>Epydoc Auto-redirect page</h3>
+
+<p>When javascript is enabled, this page will redirect URLs of
+the form <tt>redirect.html#<i>dotted.name</i></tt> to the
+documentation for the object with the given fully-qualified
+dotted name.</p>
+<p><a id="message"> &nbsp; </a></p>
+
+<script type="text/javascript">
+<!--
+if (dottedName) {
+    var msg = document.getElementById("message");
+    msg.innerHTML = "No documentation found for <tt>"+
+                    dottedName+"</tt>";
+}
+// -->
+</script>
+
+</body>
+</html>

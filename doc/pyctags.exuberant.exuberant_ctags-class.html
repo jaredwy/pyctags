@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyctags.exuberant.exuberant_ctags</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyctags-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://code.google.com/p/pyctags">pyctags</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyctags-module.html">Package&nbsp;pyctags</a> ::
+        <a href="pyctags.exuberant-module.html">Module&nbsp;exuberant</a> ::
+        Class&nbsp;exuberant_ctags
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyctags.exuberant.exuberant_ctags-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class exuberant_ctags</h1><p class="nomargin-top"><span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+<a href="pyctags.tag_base.ctags_base-class.html">tag_base.ctags_base</a> --+
+                      |
+                     <strong class="uidshort">exuberant_ctags</strong>
+</pre>
+
+<hr />
+<p>Wraps the Exuberant Ctags program.  <a 
+  href="http://ctags.sourceforge.net" 
+  target="_top">http://ctags.sourceforge.net</a></p>
+  <p>The <b>generate_tags</b> and <b>generate_tagfile</b> methods will 
+  accept custom command line parameters for exuberant ctags via the 
+  generator_options keyword dict. The Exuberant Ctags output flags (-f and 
+  -o) are reserved for internal use and will trigger an exception.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyctags.exuberant.exuberant_ctags-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Wraps the Exuberant Ctags program.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__process_kinds_list"></a><span class="summary-sig-name">__process_kinds_list</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">kinds_list</span>)</span><br />
+      Slice n dice the --list-kinds output from exuberant ctags.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.__process_kinds_list">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyctags.exuberant.exuberant_ctags-class.html#_query_tag_generator" class="summary-sig-name" onclick="show_private();">_query_tag_generator</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span><br />
+      Gets Exuberant Ctags program information.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags._query_tag_generator">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyctags.exuberant.exuberant_ctags-class.html#_dict_to_args" class="summary-sig-name" onclick="show_private();">_dict_to_args</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gen_opts</span>)</span><br />
+      Converts from a dict with command line arguments to a string to feed 
+      exuberant ctags on the comand line.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags._dict_to_args">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyctags.exuberant.exuberant_ctags-class.html#_prepare_to_generate" class="summary-sig-name" onclick="show_private();">_prepare_to_generate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">kw</span>)</span><br />
+      Prepares parameters to be passed to exuberant ctags.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags._prepare_to_generate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyctags.exuberant.exuberant_ctags-class.html#generate_tags" class="summary-sig-name">generate_tags</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Parses source files into list of tags.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.generate_tags">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">boolean</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyctags.exuberant.exuberant_ctags-class.html#generate_tagfile" class="summary-sig-name">generate_tagfile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">output_file</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Generates tag file from list of files.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.generate_tagfile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">(ctags_file or None)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyctags.exuberant.exuberant_ctags-class.html#generate_object" class="summary-sig-name">generate_object</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Parses source files into a ctags_file instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.generate_object">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyctags.tag_base.ctags_base-class.html">tag_base.ctags_base</a></code></b>:
+      <code><a href="pyctags.tag_base.ctags_base-class.html#ctags_executable">ctags_executable</a></code>,
+      <code><a href="pyctags.tag_base.ctags_base-class.html#input_files">input_files</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__version_opt"></a><span class="summary-name">__version_opt</span> = <code title="'--version'"><code class="variable-quote">'</code><code class="variable-string">--version</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__list_kinds_opt"></a><span class="summary-name">__list_kinds_opt</span> = <code title="'--list-kinds'"><code class="variable-quote">'</code><code class="variable-string">--list-kinds</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyctags.exuberant.exuberant_ctags-class.html#__argless_args" class="summary-name" onclick="show_private();">__argless_args</a> = <code title="['--version',
+ '--help',
+ '--license',
+ '--list-languages',
+ '-a',
+ '-B',
+ '-e',
+ '-F',
+..."><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">--version</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">--help</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">--license</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">--list-</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__default_opts"></a><span class="summary-name">__default_opts</span> = <code title="{'-L': '-', '-f': '-'}"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">-L</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">-</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">-f</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">-</code><code class="variable-quote">'</code><code class="variable-group">}</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__exuberant_id"></a><span class="summary-name">__exuberant_id</span> = <code title="'exuberant ctags'"><code class="variable-quote">'</code><code class="variable-string">exuberant ctags</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__supported_versions"></a><span class="summary-name">__supported_versions</span> = <code title="['5.7', '5.6b1']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">5.7</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">5.6b1</code><code class="variable-quote">'</code><code class="variable-group">]</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__warning_str"></a><span class="summary-name">__warning_str</span> = <code title="': Warning:'"><code class="variable-quote">'</code><code class="variable-string">: Warning:</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="version"></a><span class="summary-name">version</span><br />
+      Exuberant ctags version number.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="language_info"></a><span class="summary-name">language_info</span><br />
+      Exuberant ctags supported language parsing features.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyctags.tag_base.ctags_base-class.html">tag_base.ctags_base</a></code></b>:
+      <code><a href="pyctags.tag_base.ctags_base-class.html#command_line">command_line</a></code>,
+      <code><a href="pyctags.tag_base.ctags_base-class.html#warnings">warnings</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyctags.tag_base.ctags_base-class.html">tag_base.ctags_base</a></code></b> (private):
+      <code><a href="pyctags.tag_base.ctags_base-class.html#_executable_path" onclick="show_private();">_executable_path</a></code>,
+      <code><a href="pyctags.tag_base.ctags_base-class.html#_file_list" onclick="show_private();">_file_list</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Wraps the Exuberant Ctags program.</p>
+  <ul>
+    <li>
+      <b>Keyword Arguments:</b>
+      <ul>
+        <li>
+          <b>tag_program:</b> (str) path to ctags executable, or name of a 
+          ctags program in path
+        </li>
+        <li>
+          <b>files:</b> (sequence) files to process with ctags
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyctags.tag_base.ctags_base-class.html#__init__">tag_base.ctags_base.__init__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_query_tag_generator"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_query_tag_generator</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">path</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags._query_tag_generator">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Gets Exuberant Ctags program information.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>ValueError</strong></code> - No valid ctags executable set.</li>
+        <li><code><strong class='fraise'>TypeError</strong></code> - Executable is not Exuberant Ctags.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="pyctags.tag_base.ctags_base-class.html#_query_tag_generator" onclick="show_private();">tag_base.ctags_base._query_tag_generator</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_dict_to_args"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_dict_to_args</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gen_opts</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags._dict_to_args">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Converts from a dict with command line arguments to a string to feed 
+  exuberant ctags on the comand line.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gen_opts</code></strong> (dict) - command line arguments, key=argument, value=setting</li>
+    </ul></dd>
+    <dt>Returns: str</dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_prepare_to_generate"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_prepare_to_generate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">kw</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags._prepare_to_generate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Prepares parameters to be passed to exuberant ctags.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>tuple (generator_options_dict, files_str)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="generate_tags"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">generate_tags</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.generate_tags">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Parses source files into list of tags.</p>
+  <ul>
+    <li>
+      <b>Keyword Arguments:</b>
+      <ul>
+        <li>
+          <b>tag_program:</b> (str) path to ctags executable, or name of a 
+          ctags program in path
+        </li>
+        <li>
+          <b>files:</b> (sequence) files to process with ctags
+        </li>
+        <li>
+          <b>generator_options:</b> (dict) command-line options to pass to 
+          ctags program
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Returns: list</dt>
+        <dd>strings output by exuberant ctags</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>ValueError</strong></code> - ctags executable path not set, fails execution</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="pyctags.tag_base.ctags_base-class.html#generate_tags">tag_base.ctags_base.generate_tags</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="generate_tagfile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">generate_tagfile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">output_file</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.generate_tagfile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Generates tag file from list of files.</p>
+  <ul>
+    <li>
+      <b>Keyword Arguments:</b>
+      <ul>
+        <li>
+          <b>tag_program:</b> (str) path to ctags executable, or name of a 
+          ctags program in path
+        </li>
+        <li>
+          <b>files:</b> (sequence) files to process with ctags
+        </li>
+        <li>
+          <b>generator_options:</b> (dict) options to pass to ctags program
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>output_file</code></strong> (str) - File name and location to write tagfile.</li>
+    </ul></dd>
+    <dt>Returns: boolean</dt>
+        <dd>file written</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>ValueError</strong></code> - ctags executable path not set or output file isn't valid</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="pyctags.tag_base.ctags_base-class.html#generate_tagfile">tag_base.ctags_base.generate_tagfile</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="generate_object"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">generate_object</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyctags.exuberant-pysrc.html#exuberant_ctags.generate_object">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Parses source files into a ctags_file instance. This method exists to 
+  avoid storing ctags generated data in an intermediate form before 
+  parsing.</p>
+  <p>According to python documentation, this mechanism could deadlock due 
+  to other OS pipe buffers filling and blocking the child process. <a 
+  href="http://docs.python.org/library/subprocess.html" 
+  target="_top">http://docs.python.org/library/subprocess.html</a></p>
+  <ul>
+    <li>
+      <b>Keyword Arguments:</b>
+      <ul>
+        <li>
+          <b>tag_program:</b> (str) path to ctags executable, or name of a 
+          ctags program in path
+        </li>
+        <li>
+          <b>files:</b> (sequence) files to process with ctags
+        </li>
+        <li>
+          <b>generator_options:</b> (dict) options to pass to ctags program
+        </li>
+        <li>
+          <b>harvesters:</b> (list) list of harvester data classes for 
+          ctags_file to use while parsing
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Returns: (ctags_file or None)</dt>
+        <dd>generated instance of ctags_file on success, None on failure</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'>ValueError</strong></code> - ctags executable path not set</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__argless_args"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">__argless_args</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">--version</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">--help</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">--license</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">--list-languages</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">-a</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">-B</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">-e</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">-F</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyctags-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://code.google.com/p/pyctags">pyctags</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jan 01 04:48:47 2009
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+
+include doc/*.html doc/*.css doc/*.txt doc/*.js doc/*.png
+include tests/*.py tests/relpath.txt
+include examples/*.py
+include COPYING COPYING.LESSER
